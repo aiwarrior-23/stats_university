@@ -33,3 +33,9 @@
 ## module 1
 * module_1
   - utter_modules
+
+## Frequency Distribution
+* ask_fdis
+  - utter_fdis_1
+  - utter_fdis_2
+  - utter_fdis_3

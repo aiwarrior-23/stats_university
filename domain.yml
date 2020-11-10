@@ -1,138 +1,141 @@
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - module_1
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_modules:
-  - text: |
-            Given below are the modules
-    buttons:
-    - title: "Frequency Distributions"
-      payload: "utter_fdis"
-    - title: "Relative Frequency"
-      payload: "utter_rf"
-    - title: "Relative Frequency Distributions"
-      payload: "utter_rfd"
-    - title: "Bar Graph"
-      payload: "utter_bg"
-    - title: "Pareto Chart"
-      payload: "utter_pc"
-    - title: "Side by Side Bars"
-      payload: "utter_ssb"
-    - title: "Horizontal Bars"
-      payload: "utter_bar"
-    - title: "Pie Charts"
-      payload: "utter_pie"
-    - title: "Frequency Distribution Tables"
-      payload: "utter_fdt"
-    - title: "Discrete Histograms"
-      payload: "utter_dhis"
-    - title: "Continuos Data Distributions"
-      payload: "utter_cdd"   
-    - title: "Continuous Distributions"
-      payload: "utter_cdis"
-    - title: "Stem and Leaf Plots"
-      payload: "utter_slp"
-    - title: "Split Stems"
-      payload: "utter_splits"
-    - title: "Dot Plots"
-      payload: "utter_dot"
-    - title: "Shape of Distribution"
-      payload: "utter_shaped"
-    - title: "Frequency Polygons"
-      payload: "utter_fpoly"
-    - title: "Cumulative Frequency Distributions"
-      payload: "utter_cumfd"
-    - title: "Ogives"
-      payload: "utter_ogives"
-    - title: "Time Series Plots"
-      payload: "utter_tsplot"
-
-utter_fdis:
-- text: "Let's Understand Frequency Distributions"
-
-utter_rf:
-- text: "Let's Understand Relative Frequency"
-
-utter_rfd:
-- text: "Let's Understand Relative Frequency Distributions"
-
-utter_bg:
-- text: "Let's Understand Bar Graph"
-
-utter_pc:
-- text: "Let's Understand Pareto Chart"
-
-utter_ssb:
-- text: "Let's Understand Side by Side Bars"
-
-utter_bar:
-- text: "Let's Understand Horizontal Bars"
-
-utter_pie:
-- text: "Let's Understand Pie Charts"
-
-utter_fdt:
-- text: "Let's Understand Frequency Distribution Tables"
-
-utter_dhis:
-- text: "Let's Understand Discrete Histograms"
-
-utter_cdd:
-- text: "Let's Understand Continuos Data Distributions"
-
-utter_cdis:
-- text: "Let's Understand Continuous Distributions"
-
-utter_slp:
-- text: "Let's Understand Stem and Leaf Plots"
-
-utter_splits:
-- text: "Let's Understand Split Stems"
-
-utter_dot:
-- text: "Let's Understand Dot Plots"
-
-utter_shaped:
-- text: "Let's Understand Shape of Distribution"
-
-utter_fpoly:
-- text: "Let's Understand Frequency Polygons"
-
-utter_cumfd:
-- text: "Let's Understand Cumulative Frequency Distributions"
-
-utter_ogives:
-- text: "Let's Understand Ogives"
-
-utter_tsplot:
-- text: "Let's Understand Time Series Plots"
-    
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- module_1
+- ask_fdis
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_modules:
+  - buttons:
+    - payload: utter_fdis
+      title: Frequency Distributions
+    - payload: utter_rf
+      title: Relative Frequency
+    - payload: utter_rfd
+      title: Relative Frequency Distributions
+    - payload: utter_bg
+      title: Bar Graph
+    - payload: utter_pc
+      title: Pareto Chart
+    - payload: utter_ssb
+      title: Side by Side Bars
+    - payload: utter_bar
+      title: Horizontal Bars
+    - payload: utter_pie
+      title: Pie Charts
+    - payload: utter_fdt
+      title: Frequency Distribution Tables
+    - payload: utter_dhis
+      title: Discrete Histograms
+    - payload: utter_cdd
+      title: Continuos Data Distributions
+    - payload: utter_cdis
+      title: Continuous Distributions
+    - payload: utter_slp
+      title: Stem and Leaf Plots
+    - payload: utter_splits
+      title: Split Stems
+    - payload: utter_dot
+      title: Dot Plots
+    - payload: utter_shaped
+      title: Shape of Distribution
+    - payload: utter_fpoly
+      title: Frequency Polygons
+    - payload: utter_cumfd
+      title: Cumulative Frequency Distributions
+    - payload: utter_ogives
+      title: Ogives
+    - payload: utter_tsplot
+      title: Time Series Plots
+    text: "Given below are the modules\n"
+  utter_fdis:
+  - text: Let's Understand Frequency Distributions
+  utter_fdis_1:
+  - image: https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/11/25/16/caractere-2511.jpg
+    text: "Suppose a restaurant sells pizza, burger, and coffee. In one single day\
+      \ it sold 20 pizzas, 30 burgers, 25 cups of coffee and 100 water bottles.\n"
+  utter_fdis_2:
+  - image: https://raw.githubusercontent.com/aiwarrior-23/stats_university/master/images/example1.png
+    text: "We can understand the above statement using statistical term \"frequency\"\
+      . We can say that the frequency of Pizza is 20, burger is 30, coffee is 25 while\
+      \ water bottle is 100.\nWe can represent this with the help of the below table.\n"
+  utter_fdis_3:
+  - text: "This is called as Frequency Distribution and the table is Frequence Distribution\
+      \ Table.\nWe can define Frequency Distribution as, \"Listing of each category\
+      \ of data and number of occurrences of each mentioned category\"\n"
+  utter_rf:
+  - text: Let's Understand Relative Frequency
+  utter_rf_1:
+  - image: https://static.standard.co.uk/s3fs-public/thumbnails/image/2019/11/25/16/caractere-2511.jpg
+    text: |
+          Relative Frequency depicts that out of all the categories present, whats the proportion
+          of observations in each category.
+          Let us try to find out the relative frequency of the Pizza example.
+  utter_rf_2:
+  - image: https://raw.githubusercontent.com/aiwarrior-23/stats_university/master/images/example1.png
+    text: |
+          Total number of items sold = 175
+          Relative Frequency of Pizza = 20/175 = 0.11
+          Relative Frequency of Burger = 30/175 = 0.17
+          Relative Frequency of Coffee = 25/175 = 0.14
+          Relative Frequency of Water Bottles = 100/175 = 0.57
+  utter_rf_3:
+  - image: https://raw.githubusercontent.com/aiwarrior-23/stats_university/master/images/example2.png
+    text: |
+          Given above is the relative frequency distribution table for the example
+  utter_rfd:
+  - text: Let's Understand Relative Frequency Distributions
+  utter_bg:
+  - text: Let's Understand Bar Graph
+  utter_pc:
+  - text: Let's Understand Pareto Chart
+  utter_ssb:
+  - text: Let's Understand Side by Side Bars
+  utter_bar:
+  - text: Let's Understand Horizontal Bars
+  utter_pie:
+  - text: Let's Understand Pie Charts
+  utter_fdt:
+  - text: Let's Understand Frequency Distribution Tables
+  utter_dhis:
+  - text: Let's Understand Discrete Histograms
+  utter_cdd:
+  - text: Let's Understand Continuos Data Distributions
+  utter_cdis:
+  - text: Let's Understand Continuous Distributions
+  utter_slp:
+  - text: Let's Understand Stem and Leaf Plots
+  utter_splits:
+  - text: Let's Understand Split Stems
+  utter_dot:
+  - text: Let's Understand Dot Plots
+  utter_shaped:
+  - text: Let's Understand Shape of Distribution
+  utter_fpoly:
+  - text: Let's Understand Frequency Polygons
+  utter_cumfd:
+  - text: Let's Understand Cumulative Frequency Distributions
+  utter_ogives:
+  - text: Let's Understand Ogives
+  utter_tsplot:
+  - text: Let's Understand Time Series Plots
